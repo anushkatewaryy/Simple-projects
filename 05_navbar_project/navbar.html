@@ -18,6 +18,7 @@
     left: 0;       /* centers the underline */
     bottom: -3px;
     }
+    .nav1 {background-color: #fff;}
      .nav1 li a::after{
         content: "";
         position: absolute;
@@ -43,15 +44,18 @@ align-items: center;
     padding: 0;
     margin: 0;
     left: 0;
+    align-items: center;
 
     gap: 2px;}
     .nav1 .login-btn{ background-color: rgb(72, 72, 247);
     border-radius: 5px;
-    border:0;
+    
 color: #fff;
 width: 80px;
 padding: 10px 25px;
-box-sizing: content-box;}
+box-sizing: content-box;
+align-items: center;
+}
     .nav2{
         background-color: #62ab25;
         width: 200px;
@@ -96,7 +100,44 @@ box-sizing: content-box;}
     .nav2 a:hover{
         background-color: #0e850e !important;
     }
-</style>
+    .nav1 .login-btn:hover{background-color: blue;}
+    .nav3{
+        background-color: #45a2bb;
+        padding: 10px;
+    }
+    .nav3 ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    .nav3 a{
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        display: block;
+    }
+
+    .nav3 .dropdown-content{
+        display: none;
+    }
+    .nav3 .dropdown:hover .dropdown-content{
+        display: block;
+        position: absolute;
+        background-color: #363434;
+        color:#fff;
+        min-width:150px;
+    }
+    .nav3 .login-btn{
+        border-radius: 5px;
+        background-color: #10cabe;
+        color: #fff;
+        padding: 10px ;
+    }
+        </style>
 
 <body>
 <div >
@@ -122,6 +163,27 @@ box-sizing: content-box;}
         <button class="login-btn" type="button"> Login</button>
         </form>
     </nav>
+</div>
+<div class="nav-container">
+    <h2>Variation 3: Horizontal with dropdown</h2>
+    <nav class="nav3">
+        <ul>
+
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">About</a>
+                <div class="dropdown-content">
+                <a href="#">Our story</a>
+                <a href="#">Team</a>
+                <a href="#">Contact</a>
+                </div>
+            </li>
+            <li><a href="#">Products</a></li>
+            <li> <button class="login-btn">Login</button></li>
+        </ul>
+
+    </nav>
+
 </div>
 </body>
 </html>
